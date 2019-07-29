@@ -2,10 +2,18 @@ import { Animated } from 'react-native';
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
+// Styled SafeArea iPhoneX e outros for bugs
+// Evita-se o uso de Tricks para manter o layout ao rotacionar
+export const SafeAreaView = styled.SafeAreaView`
+  flex: 1;
+  background: #8B10AE;
+`;
+
 export const Container = styled.View`
   flex: 1;
   background: #8B10AE;
-  padding-top: ${getStatusBarHeight()}px;
+  /* Não necessário o uso */
+  /* padding-top: ${getStatusBarHeight()}px; */
   justify-content: center;
 `;
 
